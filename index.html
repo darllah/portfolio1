@@ -147,17 +147,17 @@
         <!-- Foto -->
         <div class="flex justify-center md:justify-end">
           <img
-            src="img/ChatGPT Image 10 Agu 2025, 12.54.17.png"
+            src="img/20250823_200424_0000.png"
             alt="Profile"
-            class="rounded-2xl shadow-lg w-64 h-auto object-cover"
+            class="drop-shadow-xl w-[300px] h-auto object-cover md:w-[800px]"
           />
         </div>
         <!-- Info -->
-        <div class="flex flex-col items-center md:items-start">
+        <div class="flex flex-col items-center md:items-start -mt-8 md:mt-0">
           <h2 class="text-2xl md:text-4xl font-bold md:mb-4">
             DIDAR MUKTAFA BILLAH
           </h2>
-          <p class="md:text-xl mb-3 md:mb-6">Fotografer | Mahasiswa IT</p>
+          <p class="mb-3 md:mb-6 md:text-2xl">Fotografer | Mahasiswa IT</p>
           <div class="flex space-x-4">
             <a
               href="https://x.com/darllah_"
@@ -222,7 +222,7 @@
           <!-- Foto (di mobile muncul duluan) -->
           <div class="md:order-2">
             <img
-              src="img/ChatGPT Image 10 Agu 2025, 12.54.17.png"
+              src="img/WhatsApp Image 2025-08-23 at 12.26.00.jpeg"
               alt="Foto About"
               class="w-full h-auto rounded-2xl shadow-lg object-cover"
             />
@@ -242,11 +242,33 @@
             <h3 class="text-2xl font-semibold mt- mb-3 md:text-2xl">
               Riwayat Pendidikan
             </h3>
-            <ul class="list-disc list-inside space-y-2 mb-3 md:text-xl">
-              <li>SDIT AL-MULTAZAM</li>
-              <li>SMPIT AL-MULTAZAM 2</li>
-              <li>MAN 1 TASIKMALAYA</li>
-              <li>UNIVERSITAS ISLAM INDONESIA</li>
+            <ul
+              class="list-disc list-inside space-y-2 mb-3 md:text-xl font-semibold"
+            >
+              <li>
+                SDIT AL-MULTAZAM
+                <p class="font-normal text-sm">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2013 - 2019
+                </p>
+              </li>
+              <li>
+                SMPIT AL-MULTAZAM 2
+                <p class="font-normal text-sm">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019 - 2022
+                </p>
+              </li>
+              <li>
+                MAN 1 TASIKMALAYA
+                <p class="font-normal text-sm">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022 - 2025
+                </p>
+              </li>
+              <li>
+                UNIVERSITAS ISLAM INDONESIA
+                <p class="font-normal text-sm">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025 - now
+                </p>
+              </li>
             </ul>
           </div>
         </div>
@@ -304,23 +326,26 @@
           <a
             href="https://x.com/darllah_"
             onclick="window.open(this.href, '_blank'); return false;"
+            class="hover:text-blue-500 transition-all"
             ><i data-feather="twitter"></i
           ></a>
           <a
             href="https://www.instagram.com/_darllah_/"
             onclick="window.open(this.href, '_blank'); return false;"
+            class="hover:text-blue-500 transition-all"
             ><i data-feather="instagram"></i
           ></a>
           <a
             href="https://www.linkedin.com/in/didar-muktafa-billah-93021437b/"
             onclick="window.open(this.href, '_blank'); return false;"
+            class="hover:text-blue-500 transition-all"
             ><i data-feather="linkedin"></i
           ></a>
           <!-- TikTok SVG -->
           <a
             href="https://www.tiktok.com/@darllah"
             onclick="window.open(this.href, '_blank'); return false;"
-            class="w-6 h-6"
+            class="h-6 w-6 hover:text-blue-500 transition-all"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -337,8 +362,13 @@
         <!-- Credit -->
         <p class="text-center text-sm md:text-xl">
           &copy; 2025
-          <span class="font-semibold">Didar Muktafa Billah</span> All rights
-          reserved.
+          <a
+            href="https://www.instagram.com/_darllah_/"
+            onclick="window.open(this.href, '_blank'); return false;"
+            class="font-semibold hover:text-blue-500 transition-all"
+            >Didar Muktafa Billah</a
+          >
+          All rights reserved.
         </p>
       </div>
     </footer>
@@ -359,191 +389,6 @@
         </button>
       </div>
     </div>
-    <script>
-      // Aktifkan feather icons
-      feather.replace();
-
-      // ===============
-      // humbergur menu
-      // ===============
-
-      const hamburger = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      hamburger.addEventListener("click", () => {
-        if (mobileMenu.classList.contains("hidden")) {
-          // tampilkan dengan transisi
-          mobileMenu.classList.remove("hidden");
-          requestAnimationFrame(() => {
-            mobileMenu.classList.add("opacity-100", "translate-y-0");
-            mobileMenu.classList.remove("opacity-0", "-translate-y-4");
-          });
-        } else {
-          // sembunyikan dengan transisi
-          mobileMenu.classList.add("opacity-0", "-translate-y-4");
-          mobileMenu.classList.remove("opacity-100", "translate-y-0");
-          setTimeout(() => {
-            mobileMenu.classList.add("hidden");
-          }, 300); // durasi transisi 300ms
-        }
-      });
-
-      // Data modal (nanti akan ditambah otomatis dari achievements & projects)
-      const modalData = {};
-
-      // Fungsi buka modal
-      function openModal(type) {
-        const modal = document.getElementById("modal");
-        const data = modalData[type];
-
-        if (data) {
-          document.getElementById("modal-title").innerText = data.title;
-          document.getElementById("modal-content").innerText = data.content;
-          modal.classList.remove("hidden");
-        }
-      }
-
-      // Fungsi tutup modal
-      function closeModal() {
-        document.getElementById("modal").classList.add("hidden");
-      }
-
-      // Tutup modal dengan klik luar
-      document.getElementById("modal").addEventListener("click", (e) => {
-        if (e.target.id === "modal") {
-          closeModal();
-        }
-      });
-
-      // Tutup modal dengan tombol ESC
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-          closeModal();
-        }
-      });
-
-      // ======================
-      // DATA ACHIEVEMENTS
-      // ======================
-      const achievements = [
-        {
-          title: "Sertifikat 1",
-          image: "img/ChatGPT Image 10 Agu 2025, 12.54.17.png",
-          content: "Deskripsi lengkap tentang sertifikat 1.",
-        },
-        {
-          title: "Sertifikat 2",
-          image: "https://via.placeholder.com/400x250",
-          content: "Deskripsi lengkap tentang sertifikat 2.",
-        },
-        {
-          title: "Sertifikat 3",
-          image: "https://via.placeholder.com/400x250",
-          content: "Deskripsi lengkap tentang sertifikat 3.",
-        },
-        {
-          title: "Sertifikat 4",
-          image: "https://via.placeholder.com/400x250",
-          content: "Deskripsi lengkap tentang sertifikat 4.",
-        },
-      ];
-
-      // Render Achievements ke HTML
-      const achievementsContainer = document.getElementById(
-        "achievements-container"
-      );
-      achievements.forEach((ach, index) => {
-        // Simpan data ke modalData
-        modalData[`achievement${index}`] = {
-          title: ach.title,
-          content: ach.content,
-        };
-
-        // Buat card HTML
-        const card = document.createElement("div");
-        card.className =
-          "bg-white dark:bg-slate-700 rounded-xl shadow p-4 transition-colors duration-500";
-
-        card.innerHTML = `
-      <img src="${ach.image}" alt="${ach.title}" class="rounded-t-xl mb-4 w-full h-48 object-cover"/>
-      <h3 class="font-semibold mb-2 text-center md:text-2xl">${ach.title}</h3>
-      <button onclick="openModal('achievement${index}')" class="text-center md:text-xl hover:opacity-80 transition-all">
-        Detail
-      </button>
-    `;
-
-        achievementsContainer.appendChild(card);
-      });
-
-      // ======================
-      // DATA PROJECTS
-      // ======================
-      const projects = [
-        {
-          title: "Project 1",
-          image: "https://via.placeholder.com/400x250",
-          content: "Deskripsi lengkap tentang Project 1.",
-        },
-        {
-          title: "Project 2",
-          image: "https://via.placeholder.com/400x250",
-          content: "Deskripsi lengkap tentang Project 2.",
-        },
-        {
-          title: "Project 3",
-          image: "https://via.placeholder.com/400x250",
-          content: "Deskripsi lengkap tentang Project 3.",
-        },
-      ];
-
-      // Render Projects ke HTML
-      const projectsContainer = document.querySelector("#projects .grid");
-      projects.forEach((proj, index) => {
-        // Simpan data ke modalData
-        modalData[`project${index}`] = {
-          title: proj.title,
-          content: proj.content,
-        };
-
-        // Buat card HTML
-        const card = document.createElement("div");
-        card.className =
-          "bg-white dark:bg-slate-900 rounded-xl shadow p-4 transition-colors duration-500";
-
-        card.innerHTML = `
-      <img src="${proj.image}" alt="${proj.title}" class="rounded mb-4 w-full h-48 object-cover"/>
-      <h3 class="font-semibold text-xl mb-2">${proj.title}</h3>
-      <button onclick="openModal('project${index}')" class="text-sm hover:opacity-80 transition-all">
-        Detail
-      </button>
-    `;
-
-        projectsContainer.appendChild(card);
-      });
-
-      // ======================
-      // dark mode toggle
-      // ======================
-
-      const themeToggle = document.getElementById("theme-toggle");
-      const htmlEl = document.documentElement;
-
-      // cek preference awal
-      if (localStorage.getItem("theme") === "dark") {
-        htmlEl.classList.add("dark");
-        themeToggle.textContent = "☀️";
-      }
-
-      themeToggle.addEventListener("click", () => {
-        htmlEl.classList.toggle("dark");
-        if (htmlEl.classList.contains("dark")) {
-          themeToggle.textContent = "☀️"; // ikon sun
-          localStorage.setItem("theme", "dark");
-        } else {
-          themeToggle.textContent = "🌙"; // ikon moon
-          localStorage.setItem("theme", "light");
-        }
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
