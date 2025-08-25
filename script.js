@@ -80,24 +80,9 @@ document.addEventListener("keydown", (e) => {
 // ======================
 const achievements = [
   {
-    title: "Sertifikat 1",
-    image: "img/ChatGPT Image 10 Agu 2025, 12.54.17.png",
-    content: "Deskripsi lengkap tentang sertifikat 1.",
-  },
-  {
-    title: "Sertifikat 2",
-    image: "https://via.placeholder.com/400x250",
-    content: "Deskripsi lengkap tentang sertifikat 2.",
-  },
-  {
-    title: "Sertifikat 3",
-    image: "https://via.placeholder.com/400x250",
-    content: "Deskripsi lengkap tentang sertifikat 3.",
-  },
-  {
-    title: "Sertifikat 4",
-    image: "https://via.placeholder.com/400x250",
-    content: "Deskripsi lengkap tentang sertifikat 4.",
+    title: "Sertifikat soon",
+    image: "",
+    content: "Deskripsi lengkap tentang sertifikat soon.",
   },
 ];
 
@@ -128,19 +113,9 @@ achievements.forEach((ach, index) => {
 // ======================
 const projects = [
   {
-    title: "Project 1",
-    image: "https://via.placeholder.com/400x250",
-    content: "Deskripsi lengkap tentang Project 1.",
-  },
-  {
-    title: "Project 2",
-    image: "https://via.placeholder.com/400x250",
-    content: "Deskripsi lengkap tentang Project 2.",
-  },
-  {
-    title: "Project 3",
-    image: "https://via.placeholder.com/400x250",
-    content: "Deskripsi lengkap tentang Project 3.",
+    title: "Project soon",
+    image: "",
+    content: "Deskripsi lengkap tentang Project soon.",
   },
 ];
 
@@ -155,7 +130,7 @@ projects.forEach((proj, index) => {
   // card HTML
   const card = document.createElement("div");
   card.className =
-    "bg-white dark:bg-gray-800 rounded-xl shadow p-4 transition-colors duration-500";
+    "bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-full max-w-xs";
   card.innerHTML = `
       <img src="${proj.image}" alt="${proj.title}" class="rounded mb-4 w-full h-48 object-cover"/>
       <h3 class="font-semibold mb-2">${proj.title}</h3>
