@@ -130,7 +130,7 @@ projects.forEach((proj, index) => {
   // card HTML
   const card = document.createElement("div");
   card.className =
-    "bg-white dark:bg-gray-800 rounded-xl shadow p-4 w-full max-w-xs";
+    "bg-white dark:bg-gray-800 rounded-xl shadow p-4 transition-colors duration-500";
   card.innerHTML = `
       <img src="${proj.image}" alt="${proj.title}" class="rounded mb-4 w-full h-48 object-cover"/>
       <h3 class="font-semibold mb-2">${proj.title}</h3>
