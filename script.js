@@ -80,9 +80,19 @@ document.addEventListener("keydown", (e) => {
 // ======================
 const achievements = [
   {
-    title: "Sertifikat soon",
-    image: "",
-    content: "Deskripsi lengkap tentang sertifikat soon.",
+    title: "Sertifikat 1",
+    image: "img/ChatGPT Image 10 Agu 2025, 12.54.17.png",
+    content: "Deskripsi lengkap tentang sertifikat 1.",
+  },
+  {
+    title: "Sertifikat 2",
+    image: "https://via.placeholder.com/400x250",
+    content: "Deskripsi lengkap tentang sertifikat 2.",
+  },
+  {
+    title: "Sertifikat 3",
+    image: "https://via.placeholder.com/400x250",
+    content: "Deskripsi lengkap tentang sertifikat 3.",
   },
 ];
 
@@ -92,18 +102,27 @@ achievements.forEach((ach, index) => {
   modalData[`achievement${index}`] = {
     title: ach.title,
     content: ach.content,
+    image: ach.image,
   };
 
   // card HTML
   const card = document.createElement("div");
   card.className =
-    "bg-white dark:bg-gray-800 rounded-xl shadow p-4 transition-colors duration-500";
+    "card bg-base-100 shadow-sm text-slate-900 max-w-xs rounded-xl";
   card.innerHTML = `
-      <img src="${ach.image}" alt="${ach.title}" class="rounded mb-4 w-full h-48 object-cover"/>
-      <h3 class="font-semibold mb-2">${ach.title}</h3>
-      <button onclick="openModal('achievement${index}')" class="text-blue-500 hover:underline">
-        Selengkapnya
-      </button>
+            <figure>
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Image"
+              />
+            </figure>
+            <div
+              class="card-body bg-slate-300 text-slate-900 dark:bg-slate-800 dark:text-slate-200"
+            >
+              <h2 class="card-title font-semibold">${ach.title}</h2>
+              <p>${ach.content}
+              </p>
+            </div>
     `;
   achievementsContainer.appendChild(card);
 });
@@ -113,30 +132,57 @@ achievements.forEach((ach, index) => {
 // ======================
 const projects = [
   {
-    title: "Project soon",
+    title: "Project 1",
     image: "",
-    content: "Deskripsi lengkap tentang Project soon.",
+    content: "Deskripsi lengkap tentang Project 1.",
+  },
+  {
+    title: "Project 2",
+    image: "",
+    content: "Deskripsi lengkap tentang Project 2.",
+  },
+  {
+    title: "Project 3",
+    image: "",
+    content: "Deskripsi lengkap tentang Project 3.",
   },
 ];
 
-const projectsContainer = document.querySelector("#projects .grid");
+const projectsContainer = document.querySelector("#project-card");
 projects.forEach((proj, index) => {
   // simpan data untuk modal
   modalData[`project${index}`] = {
     title: proj.title,
     content: proj.content,
+    image: proj.image,
   };
 
   // card HTML
   const card = document.createElement("div");
   card.className =
-    "bg-white dark:bg-gray-800 rounded-xl shadow p-4 transition-colors duration-500";
+    "relative w-96 h-64 rounded-xl overflow-hidden shadow-lg group cursor-pointer";
   card.innerHTML = `
-      <img src="${proj.image}" alt="${proj.title}" class="rounded mb-4 w-full h-48 object-cover"/>
-      <h3 class="font-semibold mb-2">${proj.title}</h3>
-      <button onclick="openModal('project${index}')" class="text-blue-500 hover:underline">
-        Selengkapnya
-      </button>
+            <!-- Gambar -->
+            <img
+              src="${proj.image}"
+              alt="image"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+
+            <!-- Overlay hitam -->
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            ></div>
+
+            <!-- Konten yang muncul dari bawah -->
+            <div
+              class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 text-white"
+            >
+              <h2 class="text-xl font-bold mb-2">${proj.title}</h2>
+              <p class="text-sm mb-4">
+                ${proj.content}
+              </p>
+            </div>
     `;
   projectsContainer.appendChild(card);
 });
