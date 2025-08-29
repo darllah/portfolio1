@@ -161,7 +161,7 @@ projects.forEach((proj, index) => {
   // card HTML
   const card = document.createElement("div");
   card.className =
-    "relative w-96 h-64 rounded-xl overflow-hidden shadow-lg group cursor-pointer";
+    "relative w-80 h-64 rounded-xl overflow-hidden shadow-lg group cursor-pointer";
   card.innerHTML = `
             <!-- Gambar -->
             <img
