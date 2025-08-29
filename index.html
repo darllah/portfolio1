@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- light dark mode -->
     <script>
@@ -29,7 +35,7 @@
       class="fixed top-0 left-0 w-full bg-white shadow z-50 transition-colors duration-500 dark:bg-slate-800"
     >
       <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
-        <h1 class="text-2xl font-bold dark:text-white">Dar.</h1>
+        <h1 class="text-2xl font-bold dark:text-white text-slate-900">Dar.</h1>
 
         <div class="flex items-center space-x-4">
           <!-- Hamburger -->
@@ -73,7 +79,7 @@
               >
             </li>
             <li>
-              <a href="#projects" class="hover:text-blue-500 dark:text-white"
+              <a href="#project" class="hover:text-blue-500 dark:text-white"
                 >Projects</a
               >
             </li>
@@ -139,7 +145,7 @@
     <!-- Home -->
     <section
       id="home"
-      class="h-[calc(100vh-64px)] flex items-center justify-center mt-16 dark:bg-slate-900 dark:text-white"
+      class="h-[calc(108vh-64px)] bg-slate-300 text-slate-900 flex items-center justify-center mt-16 dark:bg-slate-900 dark:text-white"
     >
       <div
         class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center px-6 text-center md:text-left"
@@ -183,8 +189,7 @@
                 class="hover:text-blue-500 transition-all"
               ></i
             ></a>
-            <a href="https://github.com/darllah"
-               onclick="window.open(this.href, '_blank'); return false;"
+            <a href=""
               ><i
                 data-feather="github"
                 class="hover:text-blue-500 transition-all"
@@ -215,7 +220,7 @@
     <!-- About -->
     <section
       id="about"
-      class="py-20 bg-white dark:bg-slate-700 dark:text-slate-200"
+      class="py-20 bg-white text-slate-900 dark:bg-slate-700 dark:text-slate-200"
     >
       <div class="max-w-6xl mx-auto px-6 -mb-10">
         <h2 class="text-3xl font-bold mb-8 text-center mx-auto">About Me</h2>
@@ -279,32 +284,35 @@
     <!-- Achievements -->
     <section
       id="achievements"
-      class="py-14 bg-gray-50 dark:bg-slate-900 dark:text-white"
+      class="py-20 bg-gray-50 dark:bg-slate-900 dark:text-white text-slate-800"
     >
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-8 text-center">Achievements</h2>
         <div
           id="achievements-container"
-          class="grid md:grid-cols-3 gap-6 text-center"
+          class="grid md:grid-cols-3 gap-6"
         ></div>
       </div>
     </section>
 
     <!-- Projects -->
     <section
-      id="projects"
-      class="py-20 bg-white dark:bg-slate-700 dark:text-slate-200"
+      id="project"
+      class="py-20 bg-white dark:bg-slate-700 dark:text-slate-200 text-slate-800"
     >
-      <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-6xl mx-auto">
         <h2 class="text-3xl font-bold mb-8 text-center mx-auto">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center"></div>
+        <div
+          id="project-card"
+          class="grid md:grid-cols-3 gap-16 text-center"
+        ></div>
       </div>
     </section>
 
     <!-- Contact -->
     <section
       id="contact"
-      class="py-20 bg-gray-50 text-center dark:bg-slate-900 dark:text-slate-200"
+      class="py-20 bg-gray-50 text-center dark:bg-slate-900 dark:text-slate-200 text-slate-800"
     >
       <h2 class="text-3xl font-bold mb-6 mx-auto">Contact Me</h2>
       <a
@@ -342,13 +350,6 @@
             class="hover:text-blue-500 transition-all"
             ><i data-feather="linkedin"></i
           ></a>
-          <a href="https://github.com/darllah"
-               onclick="window.open(this.href, '_blank'); return false;"
-              ><i
-                data-feather="github"
-                class="hover:text-blue-500 transition-all"
-              ></i
-            ></a>
           <!-- TikTok SVG -->
           <a
             href="https://www.tiktok.com/@darllah"
@@ -368,7 +369,7 @@
           </a>
         </div>
         <!-- Credit -->
-        <p class="text-center text-sm md:text-xl">
+        <p class="text-center text-sm">
           &copy; 2025
           <a
             href="https://www.instagram.com/_darllah_/"
