@@ -81,17 +81,17 @@ document.addEventListener("keydown", (e) => {
 const achievements = [
   {
     title: "Sertifikat 1",
-    image: "img/ChatGPT Image 10 Agu 2025, 12.54.17.png",
+    image: "",
     content: "Deskripsi lengkap tentang sertifikat 1.",
   },
   {
     title: "Sertifikat 2",
-    image: "https://via.placeholder.com/400x250",
+    image: "",
     content: "Deskripsi lengkap tentang sertifikat 2.",
   },
   {
     title: "Sertifikat 3",
-    image: "https://via.placeholder.com/400x250",
+    image: "",
     content: "Deskripsi lengkap tentang sertifikat 3.",
   },
 ];
@@ -112,7 +112,8 @@ achievements.forEach((ach, index) => {
   card.innerHTML = `
             <figure>
               <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              class="w-full h-[160px] object-cover"
+                src="${ach.image}"
                 alt="Image"
               />
             </figure>
