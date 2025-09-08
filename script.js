@@ -80,9 +80,9 @@ document.addEventListener("keydown", (e) => {
 // ======================
 const achievements = [
   {
-    title: "Sertifikat 1",
-    image: "",
-    content: "Deskripsi lengkap tentang sertifikat 1.",
+    title: "Dasar Visualisasi Data",
+    image: "img/sertif/dicoding1.jpg",
+    content: "Sertifikat pertama yang saya dapatkan di kelas online dicoding",
   },
   {
     title: "Sertifikat 2",
@@ -112,7 +112,7 @@ achievements.forEach((ach, index) => {
   card.innerHTML = `
             <figure>
               <img
-              class="w-full h-[160px] object-cover"
+              class="w-full h-[160px] object-cover-down "
                 src="${ach.image}"
                 alt="Image"
               />
@@ -120,8 +120,8 @@ achievements.forEach((ach, index) => {
             <div
               class="card-body bg-slate-300 text-slate-900 dark:bg-slate-800 dark:text-slate-200"
             >
-              <h2 class="card-title font-semibold">${ach.title}</h2>
-              <p>${ach.content}
+              <h2 class="card-title text-[1.1rem] font-bold">${ach.title}</h2>
+              <p class"font-normal">${ach.content}
               </p>
             </div>
     `;
