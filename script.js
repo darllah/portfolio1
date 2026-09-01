@@ -160,7 +160,7 @@ const projects = [
   },
   {
     title: "Editing Video Clien",
-    image: "aydattire.png",
+    image: "img/project/aydattire.png",
     content: "Editing video content Promosi AYDATTIRE",
     link: "https://www.tiktok.com/@darllah/video/7651867929222434069",
   },
