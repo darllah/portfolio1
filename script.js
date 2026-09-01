@@ -158,6 +158,12 @@ const projects = [
       "desain aplikasi SIAPSIGA | Projek terbaik ke-1 | Informatics Expo 2026",
     link: "https://zahartportfolio.my.canva.site/siapsiaga",
   },
+  {
+    title: "Editing Video Clien",
+    image: "aydattire.png",
+    content: "Editing video content Promosi AYDATTIRE",
+    link: "https://www.tiktok.com/@darllah/video/7651867929222434069",
+  },
 ];
 
 const projectsContainer = document.querySelector("#project-card");
